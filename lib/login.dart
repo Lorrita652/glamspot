@@ -106,23 +106,34 @@ class _LogInState extends State<LogIn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Switch(
-                        value: isOn,
-                        onChanged: (isOn) {
-                          setState(() {
-                            isOn = !isOn;
-                          });
-                        }),
-                    const Text(
-                      'Remember me',
-                      style: TextStyle(
-                        fontSize: 10,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Switch(
+                            value: isOn,
+                            onChanged: (isOn) {
+                              setState(() {
+                                isOn = !isOn;
+                              });
+                            }),
+                        TextButton(
+                          onPressed: () { },
+                          child: const Text(
+                            'Remember me',
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    const Text(
-                      'Forgot password',
-                      style: TextStyle(
-                        fontSize: 10,
+                    TextButton(
+                      onPressed: () {},
+                      child:  const Text(
+                        'Forgot password',
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
                       ),
                     ),
                   ],
@@ -142,7 +153,7 @@ class _LogInState extends State<LogIn> {
                           builder: (context) {
                             return SignUp();
                           },
-                        ));
+                        ),);
                       }
                     },
                     child: const Text(
