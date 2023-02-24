@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glam_spot/user%20profile.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -38,7 +39,7 @@ class _SignUpState extends State<SignUp> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Username'),
+                    const Text('Username'),
                     const SizedBox(
                       height: 8,
                     ),
@@ -162,7 +163,18 @@ class _SignUpState extends State<SignUp> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.yellow),
-                    onPressed: () {},
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return UserProfile();
+                            },
+                          ),
+                        );
+                      }
+                    },
                     child: const Text(
                       'SignUp',
                       style: TextStyle(fontSize: 15, color: Colors.black),

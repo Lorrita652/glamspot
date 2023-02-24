@@ -3,10 +3,11 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:glam_spot/intro.dart';
+import 'package:glam_spot/user profile.dart';
 import 'package:glam_spot/login.dart';
+import 'package:glam_spot/screens/dashboard.dart';
 import 'package:glam_spot/signup.dart';
-
-import 'screens/user profile.dart';
+import 'user profile.dart';
 
 void main() {
   runApp(
@@ -22,6 +23,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: LogIn());
+    return const MaterialApp(home: DashBoardView());
   }
 }
